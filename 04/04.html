@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04</title>
+</head>
+<body>
+    <textarea cols="150" rows="100">
+
+        1. not
+            - !true > false
+            - !false > true\
+
+        2. null 병항 연산자
+            - ?? 를 사용해서 null 혹은 undefined 값을 가려내는 연산자
+
+            - let example01 = null ?? 'I';
+              let example02 = undefined ?? 'love';
+              let example03 = 'IU' ?? 'JavaScript';
+
+        3. Symbol 과 BigInt
+            1) Symbol 
+                - 기본형 데이터 타입 중 하나이다. 코드내에서 유일한 값을 가진 변수 이름을 만들 때 사용한다. 
+                - let user = Symbol(); 의 형태로 사용한다. 
+                - 하나의 고유한 자료형으로 인식해도 문제는 없다.(?)
+            
+            2) BigInt
+                - 9007199254740991
+                - 배정밀부동소수점에 대해서 검색!!!!
+                - js에는 9천조의 숫자 내에서 안전한 계산이 가능하다. 
+                - 9007199254740991n < 이와 같이 정수 뒤에 n을 붙여서 사용한다. 
+                - or BigInt(9007199254740991)의 형태로 사용한다. 
+                - 실수형에서는 BigInt를 사용할 수 없다. 
+
+        4. Number('1'+'2'+'3') - Number(true) = 122
+           
+           1. Boolean("false")
+           2. Boolean(6 % 2)
+           3. Boolean(Nan) || Boolean('0')
+    </textarea>
+    <script>
+
+    </script>
+</body>
+</html>

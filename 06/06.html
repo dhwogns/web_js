@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06</title>
+</head>
+<body>
+    <textarea cols="150" rows="100">
+
+        1. 함수 표현식
+            - const printHello = (){
+                console.log('hello')
+            } < 이러한 방식으로 변수에 함수를 저장할 수도 있다. 
+        
+
+        2. 함수도 호이스팅이 된다. 
+            - printHello();
+
+              function printHello(){
+                console.log('Hello');
+              };
+
+            - printHello();
+              const printHello = function(){
+                console.log('안녕');
+              };
+            - 위와 같이 변수에 함수를 선언한 경우에는 선언 이전에 함수를 사용할 수 없다. 
+
+        3. 함수의 옵셔널 파라미터
+            - function sayHello(name){
+                    console.log(`안녕하세요 ${name}님 !`);
+                }
+
+                sayHello('아이유');
+                sayHello('제니');
+                sayHello('유재석');
+                
+            - funtion intro(name, age, nationality = '한국'){
+                console.log(`제 이름은 ${name}입니다.`);
+                console.log(`제 나이는 ${age}입니다.`);
+                console.log(`제 국적은 ${nationality}입니다.`);
+            }
+            
+    </textarea>
+    <script>
+        function chat(name){
+            console.log(`${name}(이)가 대화에 참여했습니다.`);
+        }
+
+        function multiple(x, y){
+            let result = x * y;
+            console.log(`${x} * ${y} = ${result}`);
+        }
+
+        function subway(sandwitch, drink = '스프라이트'){
+            console.log(`주문하신 샌드위치는 ${sandwitch}이고 음료는 ${drink}가 제공됩니다.`);
+        }
+    </script>
+</body>
+</html>

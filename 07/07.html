@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07</title>
+</head>
+<body>
+    <textarea cols="150" rows="50">
+
+        1. 기명 함수 표현식
+            - 이름이 있는 함수 표현식
+
+
+        2. 
+            (function countdown(n){
+                console.log(n);
+                if(n ===0){
+                    console.log('End');
+                } else {
+                    countdown(n-1);
+                }
+            })(5);
+
+        3. (function init(){
+            //프로그램이 실행 될때 기본적인 동작을 할 수 있는 코드를 작성
+        })
+    </textarea>
+    <script>
+        /*(function(x, y){
+            console.log(x+y);
+        })(3, 5);
+        
+       //외부에서 재사용할 수 없다. 
+        
+       const myObject = {
+        name : '아이유',
+        birthday : '1993',
+        isVeryNice : true,
+        sayHi : function(name){
+            console.log(`hello ${name}`);
+        }
+       }*/
+
+
+       /*function makerQuiz(quiz, answer, success, fail){
+        if(prompt(quiz)=== answer){
+            console.log(getSuccess());
+        } else { 
+            console.log(getFail());
+        }
+       };
+       function getSuccess(){
+        return '정답입니다.'
+       };
+       function getFail(){
+        return '오답입니다.'
+       }
+       const question = '5+3= ?';
+       makerQuiz(question, '8', getSuccess(), getFail());*/
+
+       /*function firstWord(){
+        let word = '';
+        for(const arg of arguments){
+            word += arg[0]
+        }  
+        console.log(word);
+       }
+
+       function printArg() {
+        for(const arg of arguments){
+            console.log(arg);
+        }
+        console.log('-----------------------------');
+       };
+       printArg('RM', '진', '슈가');
+       printArg('제이홉');
+       printArg('지민', '뷔');
+       printArg('제니', '지수', '로제', '리사');*/
+       //rest parameter ...args < rest parameter 문법
+       function printArg(...args){
+        for (const arg of args){
+            console.log(arg);
+        }
+        console.log('-----------------------------');
+       }
+       printArg('RM', '진', '슈가');
+       printArg('제이홉');
+       printArg('지민', '뷔');
+       printArg('제니', '지수', '로제', '리사');
+    </script>
+</body>
+</html>

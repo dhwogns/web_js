@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08</title>
+</head>
+<body>
+    <textarea cols="150" rows="50">
+
+        1. rest parameter 
+            - 일반 파라미터와 함께 사용할 때는 반드시 가장 마지막에 사용해야 한다. 
+
+        2. 실습
+            - ignoreFirstWord()라는 함수를 생성
+            - 1세대, 2세대, 3세대 를 파라미터로 받았을 대 가장 첫 파라미터는 출력하지 않는 코드를 작성
+
+        3. arrow function es2015 이후 등장
+            - (parameter) => {
+                //함수 내용
+            }
+            - 상황에 따라서 더 짧게 표현될 수 있다. 
+            - 파라미터가 2개 이상 있거나 없을 경우에는 소괄호를 적어주어야 한다. 
+
+        4. this 
+            - 객체 메소드를 만들 때 일반 함수로 만든는 것이 좋다. 
+
+        5. 내장 함수 
+            - String(), Number()
+    </textarea>
+    <button id="myBtn">클릭해주세요</button>
+    <script>
+        /*function ranking(str1, str2, ...others){
+            console.log('나는 가수다의 우승 결과입니다.');
+            console.log(`우승 : ${str1}`);
+            console.log(`준우승 : ${str2}`);
+            for (const arg of others){
+                console.log(`참가상 : ${arg}`);
+            }
+        }
+
+        function ignoreFirstWord(frist, ...other){
+            for (const arg of other){
+                console.log(arg);
+            }
+        }
+        function printOther(...rest){
+            rest.shift();
+        }
+        ignoreFirstWord('1세대', '2세대', '3세대');
+        ignoreFirstWord('아이팟1', '아이팟2', '아이팟3');
+        ignoreFirstWord(35, 35, 78, 7, 97, 57);
+
+        */
+       /*const double = (number)=>{
+        return number * 2;
+       }
+       console.log(double)
+        const myBtn = document.querySelector('#myBtn');
+        myBtn.addEventListener('click', function(){
+            console.log('버튼이 클릭되었습니다.')
+        })*/
+        const double = (number)=> number*2;
+        const double1 = number=> number*2;
+
+        function fullName(){
+            return `${this.firstName}${this.lastName}`;
+        }
+        const guest = {
+            firstName : '아', 
+            lastName : '이유', 
+            fullName : fullName,
+        };
+        const host = {
+            firstName : '홍',
+            lastName : '길동',
+            fullName : fullName,
+        };
+        console.log(guest.fullName);
+        console.log(host.fullName);
+    </script>
+</body>
+</html>

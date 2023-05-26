@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09</title>
+</head>
+<body>
+    <textarea cols="150" rows="50">
+        1. 
+    </textarea>
+
+    <script>
+        /*
+        let inputNumber = promt("한자리 숫자를 입력해 주세요.");
+        if (inputNumber === '7'){
+            alert('행운입니다.');
+        } else if(inputNumber === '0'){
+            alert('제로')
+        } else {
+            alert('불행입니다.')
+        }
+        */
+
+        /*var num = 3;
+        if (num % 2 === 0 && num % 3 === 0){
+            console.log(num + '는 6의 배수입니다.');
+        } else {
+            console.log(num + '는 6의 배수가 아닙니다.');
+        }*/
+        let str = ['good', 'time', 'good', 'time', 'study']
+        function distinctWords(s){
+            let ans;
+            ans = s.filter(function (v, i){
+                return s.indexOf(v)=== i;
+            });
+            return ans;
+        }
+        console.log(distinctWords(str))
+
+        let str1 = 'kisskiss';
+        function distinctWords1(s){
+            let ans = "";
+            for ( let i=0 ; i < s.length ; i++){
+                if (s.indexOf(s[i]) === i){
+                    ans += s[i];
+                }               
+            }
+            return ans;
+        }
+        console.log(distinctWords1(str1));
+    </script>
+</body>
+</html>
