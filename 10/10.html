@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10</title>
+</head>
+<body>
+    <textarea cols="150" rows="50">
+
+        
+    </textarea>
+    <script>
+        function findWord (s){
+            const uniquWords = [... new Set];
+            return uniquWords;
+        }
+
+        function distinctWords(s){
+            let uniquWords1 = [];
+
+            for (let i = 0; i< str.length; i++){
+                if(!uniquWords1.includes(str[i])){
+                    uniquWords1.push(str[i]);
+                }
+            }
+            return uniquWords1;
+        }
+
+        let str = ['goo', 'time', 'good', 'time', 'study'];
+        console.log(findWord(str));
+    </script>
+</body>
+</html>
